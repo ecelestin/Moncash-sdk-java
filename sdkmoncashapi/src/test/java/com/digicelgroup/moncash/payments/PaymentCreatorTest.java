@@ -29,7 +29,7 @@ public class PaymentCreatorTest {
         PaymentCreator creator = paymentCreator.execute(apiContext,PaymentCreator.class, payment);
         if(creator.getStatus() !=null && creator.getStatus().compareTo(HttpStatus.SC_ACCEPTED+"")==0){
             logger.info("redirect to the link below");
-            logger.info(creator.redirectUri());
+            logger.info(creator.redirectSANDBOXUri());
         }else if(creator.getStatus()==null){
             logger.warning("Error");
             logger.warning(creator.getError());
