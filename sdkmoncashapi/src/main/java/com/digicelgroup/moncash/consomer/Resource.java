@@ -8,6 +8,7 @@ import com.digicelgroup.moncash.http.HttpConnection;
 import com.digicelgroup.moncash.http.HttpMethod;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.protocol.HTTP;

@@ -9,7 +9,7 @@ import com.digicelgroup.moncash.http.HttpMethod;
 
 public class PaymentCreator extends Resource {
 
-
+    private String mode;
     private PaymentToken payment_token;
 
     public PaymentToken getPayment_token() {
@@ -18,6 +18,14 @@ public class PaymentCreator extends Resource {
 
     public void setPayment_token(PaymentToken payment_token) {
         this.payment_token = payment_token;
+    }
+
+    public String getMode() {
+        return mode;
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
     }
 
     @Override
@@ -48,6 +56,12 @@ public class PaymentCreator extends Resource {
         if(this.getPayment_token()==null){
             throw new IllegalArgumentException("paymentToken must not be null");
         }
-        return Constants.REDIRECT_URI+"?token="+this.getPayment_token().getToken();
+        if(this.mode.compareTo(Constants.SANDBOX)==0){
+            return Constants.SANDBOX_REDIRECT + Constants.GATE_WAY_URI + "?token=" + this.getPayment_token().getToken();
+        }else if(this.mode.compareTo(Constants.LIVE)==0){
+            return Constants.LIVE_REDIRECT+"?token="+this.getPayment_token().getToken();
+        }else{
+            throw new IllegalArgumentException("Mode must be "+Constants.SANDBOX+" or "+Constants.LIVE);
+        }
     }
 }

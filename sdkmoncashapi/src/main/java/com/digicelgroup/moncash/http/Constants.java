@@ -20,11 +20,15 @@ public class Constants {
 
     public static final String PAYMENT_ORDER_URI = "/v1/RetriveOrderPayment";
 
-    public static final String REST_SANDBOX_ENDPOINT = "http://localhost:8080";
+    public static final String REST_SANDBOX_ENDPOINT = "http://200.113.192.182:8080/Api";
 
-    public static final String REST_LIVE_ENDPOINT = "http://localhost:8080";
+    public static final String REST_LIVE_ENDPOINT = "https://api.moncashbutton.digicelgroup.com";
 
-    public static final String REDIRECT_URI = "http://localhost:8080";
+    public static final String SANDBOX_REDIRECT = "http://200.113.192.182:8080/Moncash-middleware";
+
+    public static final String LIVE_REDIRECT = "http://200.113.192.182:8080/Moncash-middleware";
+
+    public static final String GATE_WAY_URI = "/Payment/Redirect";
 
     public static final String SANDBOX = "sandbox";
 
