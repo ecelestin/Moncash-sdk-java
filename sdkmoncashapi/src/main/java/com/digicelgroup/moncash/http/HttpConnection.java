@@ -101,7 +101,6 @@ public class HttpConnection {
             String response = EntityUtils.toString(httpResponse.getEntity());
             return response;
         } catch (IOException e) {
-            System.out.println(e.getMessage());
             throw new MonCashRestException(e.getMessage(), e.getCause());
         }
 
