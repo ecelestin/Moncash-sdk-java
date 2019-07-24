@@ -16,9 +16,9 @@ public class Constants {
 
     public static final String PAYMENT_CREATOR_URI = "/v1/CreatePayment";
 
-    public static final String PAYMENT_TRANSACTION_URI = "/v1/RetriveTransactionPayment";
+    public static final String PAYMENT_TRANSACTION_URI = "/v1/RetrieveTransactionPayment";
 
-    public static final String PAYMENT_ORDER_URI = "/v1/RetriveOrderPayment";
+    public static final String PAYMENT_ORDER_URI = "/v1/RetrieveOrderPayment";
 
     public static final String REST_SANDBOX_ENDPOINT = "http://200.113.192.182:8080/Api";
 
