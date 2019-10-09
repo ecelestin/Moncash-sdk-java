@@ -17,7 +17,7 @@ public class PaymentCaptureTest {
         PaymentCapture paymentCapture = new PaymentCapture();
         APIContext apiContext = new APIContext(CredentialTest.CLIENT_ID, CredentialTest.CLIENT_SECRET, Constants.SANDBOX);
         TransactionId transactionId = new TransactionId();
-        transactionId.setTransactionId("1555945998145");
+        transactionId.setTransactionId("12874819");
         PaymentCapture capture = paymentCapture.execute(apiContext,PaymentCapture.class, transactionId);
         if(capture.getStatus() !=null && capture.getStatus().compareTo(HttpStatus.SC_OK+"")==0){
             logger.info("Transaction");
@@ -25,10 +25,9 @@ public class PaymentCaptureTest {
             logger.info("transactio_id="+capture.getPayment().getTransaction_id());
             logger.info("Payer="+capture.getPayment().getPayer());
             logger.info("amount="+capture.getPayment().getCost()+"");
+        } else {
+            logger.info(capture.getStatus());
         }
-
-
-
     }
 
     @Test
