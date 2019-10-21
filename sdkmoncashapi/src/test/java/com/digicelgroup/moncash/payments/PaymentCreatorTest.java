@@ -22,7 +22,7 @@ public class PaymentCreatorTest {
     @Test
     public void create() throws Exception {
         PaymentCreator paymentCreator = new PaymentCreator();
-        APIContext apiContext = new APIContext(CredentialTest.CLIENT_ID, CredentialTest.CLIENT_SECRET, Constants.SANDBOX);
+        APIContext apiContext = new APIContext(CredentialTest.CLIENT_ID, CredentialTest.CLIENT_SECRET, Constants.LIVE);
         Payment payment = new Payment();
         payment.setOrderId(System.currentTimeMillis()+"");
         payment.setAmount(50);
