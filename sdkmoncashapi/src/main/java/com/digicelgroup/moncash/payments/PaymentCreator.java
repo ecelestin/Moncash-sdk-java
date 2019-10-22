@@ -59,7 +59,7 @@ public class PaymentCreator extends Resource {
         if(this.mode.compareTo(Constants.SANDBOX)==0){
             return Constants.SANDBOX_REDIRECT + Constants.GATE_WAY_URI + "?token=" + this.getPayment_token().getToken();
         }else if(this.mode.compareTo(Constants.LIVE)==0){
-            return Constants.LIVE_REDIRECT+"?token="+this.getPayment_token().getToken();
+            return Constants.LIVE_REDIRECT + Constants.GATE_WAY_URI + "?token="+this.getPayment_token().getToken();
         }else{
             throw new IllegalArgumentException("Mode must be "+Constants.SANDBOX+" or "+Constants.LIVE);
         }
