@@ -98,6 +98,7 @@ public abstract class Resource extends Model{
 
         httpConnection.setEntity(entity);
         String jsonResponse = httpConnection.execute();
+        System.out.println(jsonResponse);
         return new GsonBuilder().create().fromJson(jsonResponse, tClass);
     }
 }
