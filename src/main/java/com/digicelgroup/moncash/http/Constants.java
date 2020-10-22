@@ -20,6 +20,8 @@ public class Constants {
 
     public static final String PAYMENT_ORDER_URI = "/v1/RetrieveOrderPayment";
 
+    public static final String TRANSFER_URI = "/v1/Transfert";
+
     public static final String REST_SANDBOX_ENDPOINT = "https://sandbox.moncashbutton.digicelgroup.com/Api";
 
     public static final String REST_LIVE_ENDPOINT = "https://moncashbutton.digicelgroup.com/Api";

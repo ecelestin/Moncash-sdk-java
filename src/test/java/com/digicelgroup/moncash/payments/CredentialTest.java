@@ -2,8 +2,8 @@ package com.digicelgroup.moncash.payments;
 
 public class CredentialTest {
 
-    public static String CLIENT_ID = "c1bf0a27d6bbb217a599c9e25480c11d";
+    public static String CLIENT_ID = "c338a37a3152878b1d745db14800fadd";
 
-    public static String CLIENT_SECRET = "oHrr4tbnB1PH0uz6VQNUvVVDNVNvk0WiIXZWBAed4-CBCwilT8yUdS87AZoPrtqN";
+    public static String CLIENT_SECRET = "JSlKjWtLgfbjQUtm12BGTFsiA4JfyNZXFeH3QQi8cfFU3o15Of3ASAMxpyvuCGpP";
 
 }
