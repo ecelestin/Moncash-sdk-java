@@ -5,6 +5,7 @@ public class TransferRequest {
     private double amount;
     private String receiver;
     private String desc;
+    private String reference;
 
     public double getAmount() {
         return amount;
@@ -28,5 +29,13 @@ public class TransferRequest {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 }

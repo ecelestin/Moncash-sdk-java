@@ -19,6 +19,7 @@ public class TransferSenderTest {
         transferRequest.setAmount(22);
         transferRequest.setReceiver("50938662809");
         transferRequest.setDesc("Test");
+        transferRequest.setReference(System.nanoTime()+"");
         TransferSender transferSender = TransferSender.build().execute(apiContext, TransferSender.class, transferRequest);
         if(transferSender.getStatus() !=null && transferSender.getStatus().compareTo(HttpStatus.SC_OK+"")==0){
             logger.info("Transaction");
